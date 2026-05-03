@@ -1,0 +1,46 @@
+/* === 熊熊需要抱一下 — 設計 token === */
+:root {
+  /* Backgrounds — sampled from palette + scene cream */
+  --cream: #FBF3DC;        /* bear-poses bg cream */
+  --cream-soft: #FDF8E8;
+  --paper: #FFFDF6;
+  --off-white: #F7F3EA;
+  --sky: #B8D4EC;          /* dress soft blue */
+  --sky-pale: #E2EDF6;
+  --sky-deep: #8AB6D6;
+
+  /* Marks */
+  --bear-dark: #3E2A12;    /* darkest brown stroke */
+  --bear-mid: #6B4A23;     /* mid brown */
+  --bear-warm: #A07749;    /* bear body */
+  --bear-light: #D7B58A;   /* warm tan */
+  --bear-pale: #EAD6B4;
+  --hair-yellow: #F2D74A;  /* girl hair */
+  --hair-light: #FBE678;
+  --skin: #FCE8C9;
+  --heart-red: #D62828;    /* hair clip red (legacy) */
+  --accent: #C68B3C;       /* warm caramel — 主要重點色（取代紅色） */
+  --accent-soft: rgba(198,139,60,0.18);
+  --bear-deep: #2E1E0C;    /* 深咖啡 — 用於社群資訊底色 */
+  --blush: #F4A89A;        /* peach blush */
+  --rose: #C46B66;         /* dusty rose */
+  --olive: #B59A35;        /* mustard accent */
+  --warm-grey: #A8957A;
+
+  /* Type stack — 粉圓體 (jf-openhuninn) for all Chinese */
+  --font-tw: "jf-openhuninn-2.0", "jf-openhuninn-1.1", "jf-openhuninn", "Yuanti TC", "Yuanti SC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --font-tw-display: "jf-openhuninn-2.0", "jf-openhuninn-1.1", "jf-openhuninn", "Yuanti TC", "Yuanti SC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --font-en: "Caveat", "Patrick Hand", "jf-openhuninn-2.0", cursive;
+  --font-en-body: "jf-openhuninn-2.0", "Patrick Hand", "Caveat", sans-serif;
+  --font-mono: "DM Mono", "JetBrains Mono", monospace;
+}
+
+/* Common utility — soft paper texture (radial speckle made with css) */
+.paper-texture {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(rgba(160,119,73,0.04) 1px, transparent 1.2px),
+    radial-gradient(rgba(160,119,73,0.03) 1px, transparent 1.2px);
+  background-size: 22px 22px, 37px 37px;
+  background-position: 0 0, 11px 18px;
+}

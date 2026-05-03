@@ -1,0 +1,83 @@
+/* ───────── 手機 Mobile (≤640px) ─────────
+   只放手機獨有的 override；想單獨改手機版型請只動本檔。 */
+@media (max-width: 640px) {
+  /* Hero — 頁面更高、給標題與表情上下喘息 */
+  .vc-stage { height: auto; min-height: 760px; padding: 80px 0; }
+  .vc-titlewrap { width: 84%; max-width: 380px; min-width: 0; }
+  .vc-title-logo { max-width: 320px; }
+  .vc-title-en { font-size: 28px; margin-top: 10px; }
+  .vc-title-sub { font-size: 13px; letter-spacing: 0.22em; margin-top: 18px; }
+
+  .vc-hint { bottom: 110px; font-size: 13px; letter-spacing: 0.18em; gap: 8px; }
+  .vc-hint-en { font-size: 12px; }
+  .vc-scroll-cue { bottom: 28px; }
+
+  /* 散落表情手機尺寸放大（用分號錨定避免 8% 跟 88% 撞） */
+  .vc-scatter img { width: 100%; }
+  .vc-scatter[style*="left: 10%;"] { width: 30vw !important; }
+  .vc-scatter[style*="left: 88%;"] { width: 32vw !important; }
+  .vc-scatter[style*="left: 8%;"]  { width: 30vw !important; }
+  .vc-scatter[style*="left: 90%;"] { width: 28vw !important; }
+  .vc-scatter[style*="left: 32%;"] { width: 26vw !important; }
+  .vc-scatter[style*="left: 78%;"] { width: 26vw !important; }
+  .vc-scatter[style*="left: 50%;"] { width: 22vw !important; }
+
+  /* Sections — 留白比 padding 重要 */
+  .vc-section { padding: 110px 7vw; }
+  .vc-num { font-size: 56px; margin-bottom: 4px; }
+  .vc-h2 { font-size: clamp(26px, 7.6vw, 34px); letter-spacing: 0.04em; line-height: 1.7; margin-bottom: 36px; }
+  .vc-section-label { font-size: 14px; letter-spacing: 0.32em; margin-bottom: 22px; }
+
+  /* Concept (page 2) — 置中 */
+  .vc-concept { text-align: center; }
+  .vc-concept .vc-h2 { text-wrap: balance; }
+  .vc-concept-grid { gap: 44px; margin-top: 18px; }
+  .vc-concept-img { max-width: 300px; }
+  .vc-concept-text p { font-size: 15.5px; line-height: 2.1; margin-bottom: 22px; letter-spacing: 0.04em; text-align: center; }
+
+  .vc-pillars { grid-template-columns: 1fr; gap: 22px; margin-top: 64px; }
+  .vc-pillar { padding: 28px 26px; border-radius: 18px; text-align: center; }
+  .vc-pillar-no { margin-bottom: 12px; }
+  .vc-pillar-title { font-size: 20px; margin-bottom: 4px; }
+  .vc-pillar-en { font-size: 14px; margin-bottom: 16px; }
+  .vc-pillar p { font-size: 14.5px; line-height: 2; }
+
+  /* Loop (page 3) — 置中 */
+  .vc-loop { padding: 80px 28px; border-radius: 28px; text-align: center; }
+  .vc-loop-info { font-size: 14px; letter-spacing: 0.14em; margin-bottom: 44px; }
+  .vc-loop-flow { gap: 14px; margin-bottom: 44px; }
+  .vc-flow-step { min-width: 0; padding: 18px 16px; flex: 1 1 100%; text-align: center; }
+  .vc-flow-no { font-size: 20px; }
+  .vc-flow-tw { font-size: 16px; margin: 6px 0 4px; }
+  .vc-flow-en { font-size: 12.5px; }
+  .vc-flow-arrow { font-size: 22px; width: 100%; text-align: center; }
+  .vc-loop-quote { font-size: 19px; line-height: 2; letter-spacing: 0.1em; }
+
+  /* Contact */
+  .vc-contact { gap: 36px; padding-bottom: 80px; }
+  .vc-contact-illust { max-width: 240px; }
+  .vc-contact-card { padding: 44px 28px; border-radius: 22px; }
+  .vc-contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 14px 0;
+  }
+  .vc-key { min-width: 0; font-size: 11px; letter-spacing: 0.22em; }
+  .vc-val { font-size: 15.5px; line-height: 1.6; word-break: break-word; }
+
+  /* Bear tile — 小一點避免手機看起來太重 */
+  .vc-bear-bg { background-size: 130px 130px; }
+
+  /* Footer */
+  .vc-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 12.5px;
+    padding: 32px 7vw 44px;
+    letter-spacing: 0.16em;
+    gap: 10px;
+    line-height: 1.7;
+  }
+}

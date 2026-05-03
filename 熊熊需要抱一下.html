@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>熊熊需要抱一下 — 吳映璇 畢業製作</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/justfont/open-huninn-font@2.0/dist/jf-openhuninn-2.0.css">
+
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="version-c.css">
+<link rel="stylesheet" href="version-c.tablet.css" media="(max-width: 1024px)">
+<link rel="stylesheet" href="version-c.mobile.css" media="(max-width: 640px)">
+
+<style>
+  html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: #f0eee9; font-family: var(--font-tw); }
+  *, *::before, *::after { box-sizing: border-box; }
+  #app { width: 100%; height: 100vh; }
+  .stage-frame {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: var(--paper);
+  }
+</style>
+</head>
+<body>
+
+<div id="app"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="version-c.jsx"></script>
+
+<script type="text/babel">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "bg": "cream"
+}/*EDITMODE-END*/;
+
+const BG_MAP = {
+  cream: "var(--cream-soft)",
+  paper: "var(--paper)",
+  sky:   "var(--sky-pale)"
+};
+
+function App() {
+  const bg = BG_MAP[TWEAK_DEFAULTS.bg] || BG_MAP.cream;
+  return (
+    <div className="stage-frame">
+      <VersionC bg={bg} />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+</script>
+
+</body>
+</html>

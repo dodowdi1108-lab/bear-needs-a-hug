@@ -1,0 +1,298 @@
+/* === Version B：詩意直書留白 === */
+.vb-root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: var(--font-tw);
+  color: var(--bear-dark);
+  overflow: hidden;
+  transition: background 600ms ease;
+}
+.vb-fixed-header {
+  position: absolute;
+  top: 24px; left: 32px; right: 32px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  font-family: var(--font-en);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: var(--bear-warm);
+  pointer-events: none;
+}
+.vb-meta-author { font-family: var(--font-tw); letter-spacing: 0.08em; }
+
+.vb-scroller {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  scroll-behavior: smooth;
+}
+.vb-scroller::-webkit-scrollbar { display: none; }
+.vb-scroller { scrollbar-width: none; }
+
+.vb-pane {
+  flex-shrink: 0;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.vb-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: var(--font-tw-display);
+  letter-spacing: 0.4em;
+  line-height: 1.9;
+}
+.vb-vertical-lg { font-size: 32px; }
+.vb-vertical-md { font-size: 22px; line-height: 2.2; }
+.vb-vertical-sm { font-size: 16px; line-height: 2.2; color: var(--bear-mid); }
+
+.vb-section-num {
+  font-family: var(--font-tw-display);
+  font-size: 18px;
+  color: var(--heart-red);
+  letter-spacing: 0.3em;
+  margin-bottom: 4px;
+}
+.vb-section-en {
+  font-family: var(--font-en);
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  color: var(--bear-warm);
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+
+/* Cover */
+.vb-cover {
+  width: 100vw;
+  min-width: 720px;
+  padding: 0 80px;
+  gap: 60px;
+}
+.vb-title-logo {
+  width: 38%;
+  max-width: 460px;
+  height: auto;
+  filter: drop-shadow(0 8px 16px rgba(62,42,18,0.10));
+}
+.vb-cover-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  align-items: center;
+}
+.vb-scroll-hint {
+  font-family: var(--font-en);
+  font-size: 13px;
+  color: var(--bear-warm);
+  letter-spacing: 0.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.vb-arrow {
+  font-size: 22px;
+  animation: vbBounce 1.6s ease-in-out infinite;
+}
+@keyframes vbBounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+}
+.vb-cover-illust {
+  width: 36%;
+  max-width: 420px;
+  height: auto;
+  filter: drop-shadow(0 14px 22px rgba(62,42,18,0.10));
+}
+
+/* Concept pane */
+.vb-pane-concept {
+  width: 1100px;
+  padding: 0 100px;
+  gap: 80px;
+}
+.vb-concept-text { display: flex; flex-direction: column; align-items: flex-start; }
+.vb-em {
+  color: var(--heart-red);
+  font-weight: 700;
+}
+.vb-illust-1 {
+  width: 320px;
+  height: auto;
+  align-self: center;
+  filter: drop-shadow(0 14px 22px rgba(62,42,18,0.12));
+}
+.vb-quote {
+  align-self: flex-end;
+  margin-bottom: 80px;
+  color: var(--bear-mid);
+}
+
+/* Vessel pane */
+.vb-pane-vessel {
+  width: 900px;
+  padding: 0 80px;
+  gap: 60px;
+  background:
+    radial-gradient(ellipse at 60% 50%, rgba(184,212,236,0.18) 0%, transparent 60%);
+}
+.vb-big-quote {
+  font-size: 140px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--bear-dark);
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.vb-big-quote span:first-child { color: var(--heart-red); }
+.vb-vessel-body { color: var(--bear-mid); margin-top: 60px; }
+.vb-poses {
+  width: 280px;
+  height: auto;
+  align-self: flex-end;
+  margin-bottom: 40px;
+  opacity: 0.85;
+}
+
+/* Loop pane */
+.vb-pane-loop {
+  width: 1300px;
+  padding: 0 100px;
+  gap: 60px;
+  align-items: stretch;
+}
+.vb-loop-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.vb-loop-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  border-left: 2px dashed var(--bear-light);
+  padding-left: 36px;
+}
+.vb-loop-steps li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 18px;
+  align-items: center;
+  position: relative;
+}
+.vb-loop-steps li::before {
+  content: "";
+  position: absolute;
+  left: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--heart-red);
+  box-shadow: 0 0 0 4px rgba(214,40,40,0.18);
+}
+.vb-step-no {
+  grid-row: 1 / span 2;
+  font-family: var(--font-en);
+  font-size: 32px;
+  color: var(--bear-warm);
+  font-weight: 700;
+}
+.vb-step-tw {
+  font-size: 19px;
+  letter-spacing: 0.08em;
+  color: var(--bear-dark);
+}
+.vb-step-en {
+  font-family: var(--font-en);
+  font-size: 15px;
+  color: var(--bear-warm);
+  letter-spacing: 0.04em;
+}
+.vb-loop-meaning {
+  align-self: center;
+  margin-left: 20px;
+  border-left: 1px solid var(--bear-light);
+  padding-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 70%;
+}
+.vb-illust-loop {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 220px;
+  height: auto;
+  opacity: 0.7;
+}
+
+/* End pane */
+.vb-pane-end {
+  width: 1100px;
+  padding: 0 100px;
+  gap: 60px;
+  background: linear-gradient(135deg, transparent 0%, rgba(244,168,154,0.10) 100%);
+}
+.vb-end-illust {
+  width: 320px;
+  height: auto;
+  filter: drop-shadow(0 18px 26px rgba(62,42,18,0.14));
+}
+.vb-end-text {
+  font-size: 38px;
+  letter-spacing: 0.3em;
+  color: var(--bear-dark);
+}
+.vb-end-text :first-child { color: var(--heart-red); }
+.vb-end-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin-left: 40px;
+}
+.vb-end-info { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+.vb-end-name { font-family: var(--font-tw-display); font-size: 32px; font-weight: 700; letter-spacing: 0.12em; color: var(--bear-dark); }
+.vb-end-name-en { font-family: var(--font-en); font-size: 20px; color: var(--bear-warm); }
+.vb-end-class { font-size: 13px; color: var(--warm-grey); letter-spacing: 0.1em; margin-top: 6px; }
+.vb-end-adv { font-size: 13px; color: var(--warm-grey); letter-spacing: 0.1em; }
+.vb-end-mail {
+  margin-top: 14px;
+  font-family: var(--font-en);
+  font-size: 18px;
+  color: var(--heart-red);
+  text-decoration: none;
+  border-bottom: 2px solid var(--heart-red);
+  padding-bottom: 2px;
+  align-self: flex-start;
+}
+
+.vb-progress {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: rgba(160,119,73,0.12);
+  z-index: 10;
+}
+.vb-progress-bar {
+  height: 100%;
+  background: var(--heart-red);
+  transition: width 80ms linear;
+}

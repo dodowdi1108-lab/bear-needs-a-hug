@@ -1,0 +1,36 @@
+/* ───────── 平板 Tablet (≤1024px) ─────────
+   只放平板獨有的 override；想單獨改平板版型請只動本檔。 */
+@media (max-width: 1024px) {
+  .vc-titlewrap { width: 50%; max-width: 440px; }
+  .vc-title-logo { max-width: 380px; }
+  .vc-title-en { font-size: 36px; }
+  .vc-title-sub { font-size: 16px; letter-spacing: 0.24em; }
+
+  .vc-section { padding: 96px 5vw; }
+  .vc-num { font-size: 64px; }
+  .vc-h2 { font-size: clamp(28px, 4.4vw, 42px); }
+  .vc-section-label { font-size: 16px; letter-spacing: 0.32em; }
+
+  .vc-concept-grid { grid-template-columns: 1fr; gap: 36px; }
+  .vc-concept-img { max-width: 380px; margin-top: 8px; }
+  .vc-concept-text p { font-size: 16px; line-height: 2; }
+
+  .vc-pillars { grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 60px; }
+  .vc-pillar { padding: 22px; }
+
+  .vc-loop { padding: 70px 36px; }
+  .vc-loop-flow { gap: 10px; }
+  .vc-flow-step { min-width: 124px; padding: 14px 18px; }
+  .vc-loop-quote { font-size: 22px; letter-spacing: 0.12em; }
+
+  .vc-contact { grid-template-columns: 1fr; gap: 32px; }
+  .vc-contact-illust { max-width: 320px; }
+  .vc-contact-card { padding: 48px 40px; border-radius: 24px; }
+  .vc-key { min-width: 100px; font-size: 12px; letter-spacing: 0.2em; }
+  .vc-val { font-size: 16px; }
+
+  .vc-bear-bg { background-size: 360px 360px; }
+
+  .vc-footer { font-size: 15px; padding: 28px 5vw 40px; }
+  .vc-footer span { flex: 1 1 auto; }
+}
