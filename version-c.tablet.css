@@ -24,8 +24,13 @@
   .vc-concept-img { max-width: 380px; margin-top: 8px; }
   .vc-concept-text p { font-size: 16px; line-height: 2; }
 
-  .vc-pillars { grid-template-columns: 1fr; gap: 18px; margin-top: 60px; }
-  .vc-pillar { padding: 22px; }
+  .vc-pillars {
+    grid-template-columns: minmax(0, 480px);
+    justify-content: center;
+    gap: 18px;
+    margin-top: 60px;
+  }
+  .vc-pillar { padding: 24px 28px; text-align: center; }
 
   .vc-loop { padding: 70px 36px; }
   .vc-loop-flow { gap: 10px; }
