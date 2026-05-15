@@ -144,7 +144,7 @@ function VersionC({ bg }) {
       <section className="vc-section vc-loop">
         <div className="vc-num">02</div>
         <div className="vc-section-label">循環動畫　Loop Animation</div>
-        <h2 className="vc-h2">情好沒有消失<br/>是被<span className="vc-em">接住</span>、被<span className="vc-em">轉化</span>了</h2>
+        <h2 className="vc-h2">情緒沒有消失<br/>是被<span className="vc-em">接住</span>、<span className="vc-em">轉化</span>了</h2>
         <div className="vc-loop-info">手繪定格動畫 · 15–20 秒 · 循環播放</div>
         <div className="vc-loop-flow">
           <FlowStep no="01" tw="小孩哭泣" en="Tears fall" />
