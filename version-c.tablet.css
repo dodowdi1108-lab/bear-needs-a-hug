@@ -6,6 +6,15 @@
   .vc-title-en { font-size: 36px; }
   .vc-title-sub { font-size: 16px; letter-spacing: 0.24em; }
 
+  /* 散落表情平板尺寸放大（用分號錨定避免 8% 跟 88% 撞） */
+  .vc-scatter[style*="left: 10%;"] { width: 22vw !important; }
+  .vc-scatter[style*="left: 88%;"] { width: 23vw !important; }
+  .vc-scatter[style*="left: 8%;"]  { width: 22vw !important; }
+  .vc-scatter[style*="left: 90%;"] { width: 21vw !important; }
+  .vc-scatter[style*="left: 32%;"] { width: 20vw !important; }
+  .vc-scatter[style*="left: 78%;"] { width: 20vw !important; }
+  .vc-scatter[style*="left: 50%;"] { width: 18vw !important; }
+
   .vc-section { padding: 96px 5vw; }
   .vc-num { font-size: 64px; }
   .vc-h2 { font-size: clamp(28px, 4.4vw, 42px); }
