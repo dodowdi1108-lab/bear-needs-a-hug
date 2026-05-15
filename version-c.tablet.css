@@ -7,13 +7,13 @@
   .vc-title-sub { font-size: 16px; letter-spacing: 0.24em; }
 
   /* 散落表情平板：縮小並分散（用分號錨定避免 8% 跟 88% 撞） */
-  .vc-scatter[style*="left: 10%;"] { left: 12% !important; width: 26vw !important; }
-  .vc-scatter[style*="left: 88%;"] { left: 86% !important; width: 28vw !important; }
-  .vc-scatter[style*="left: 8%;"]  { left: 10% !important; width: 26vw !important; }
-  .vc-scatter[style*="left: 90%;"] { left: 88% !important; width: 24vw !important; }
-  .vc-scatter[style*="left: 32%;"] { left: 30% !important; width: 22vw !important; }
-  .vc-scatter[style*="left: 78%;"] { left: 76% !important; width: 22vw !important; }
-  .vc-scatter[style*="left: 50%;"] { width: 18vw !important; }
+  .vc-scatter[style*="left: 10%;"] { left: 12% !important; width: 32vw !important; }
+  .vc-scatter[style*="left: 88%;"] { left: 86% !important; width: 34vw !important; }
+  .vc-scatter[style*="left: 8%;"]  { left: 10% !important; width: 32vw !important; }
+  .vc-scatter[style*="left: 90%;"] { left: 88% !important; width: 30vw !important; }
+  .vc-scatter[style*="left: 32%;"] { left: 30% !important; width: 28vw !important; }
+  .vc-scatter[style*="left: 78%;"] { left: 76% !important; width: 28vw !important; }
+  .vc-scatter[style*="left: 50%;"] { width: 22vw !important; }
 
   .vc-section { padding: 96px 5vw; }
   .vc-num { font-size: 64px; }
@@ -22,7 +22,8 @@
 
   .vc-concept-grid { grid-template-columns: 1fr; gap: 36px; }
   .vc-concept-img { max-width: 380px; margin-top: 8px; }
-  .vc-concept-text p { font-size: 16px; line-height: 2; }
+  .vc-concept-text { text-align: center; }
+  .vc-concept-text p { font-size: 16px; line-height: 2; text-align: center; }
 
   .vc-pillars {
     grid-template-columns: minmax(0, 360px);
