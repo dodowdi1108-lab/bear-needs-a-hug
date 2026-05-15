@@ -11,14 +11,20 @@
   .vc-scatter[style*="left: 88%;"] { left: 86% !important; width: 34vw !important; }
   .vc-scatter[style*="left: 8%;"]  { left: 10% !important; top: 60% !important; width: 32vw !important; }
   .vc-scatter[style*="left: 90%;"] { left: 88% !important; width: 30vw !important; }
-  .vc-scatter[style*="left: 32%;"] { left: 30% !important; width: 28vw !important; }
-  .vc-scatter[style*="left: 78%;"] { left: 76% !important; width: 28vw !important; }
+  .vc-scatter[style*="left: 32%;"] { left: 30% !important; top: 94% !important; width: 28vw !important; }
+  .vc-scatter[style*="left: 78%;"] { left: 76% !important; top: 96% !important; width: 28vw !important; }
   .vc-scatter[style*="left: 50%;"] { width: 22vw !important; }
 
   .vc-section { padding: 96px 5vw; }
   .vc-num { font-size: 64px; }
   .vc-h2 { font-size: clamp(28px, 4.4vw, 42px); text-align: center; }
   .vc-section-label { font-size: 16px; letter-spacing: 0.32em; }
+
+  /* 第二、三頁（concept / loop）的編號與小標題置中；聯絡頁不動 */
+  .vc-concept .vc-num,
+  .vc-concept .vc-section-label,
+  .vc-loop .vc-num,
+  .vc-loop .vc-section-label { text-align: center; }
 
   .vc-concept-grid { grid-template-columns: 1fr; gap: 36px; }
   .vc-concept-img { max-width: 380px; margin-top: 8px; }
